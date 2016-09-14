@@ -1,0 +1,16 @@
+{
+    "name": "matrix/text-anal",
+    "description": "Analyzes texts and determines the amount of profanity used",
+    "minimum-stability": "dev",
+    "type": "project",
+    "license": "The Unlicense",
+    "authors": [
+        {
+            "name": "Mason Phillips",
+            "email": "math.matrix@icloud.com"
+        }
+    ],
+    "require": {
+        "guiguiboy/php-cli-progress-bar": "dev-master"
+    }
+}
