@@ -5,6 +5,7 @@
     private $input;
     private $counts;
     private $fset;
+    private $should;
 
     public function __construct() {
       $raw = fopen('dict.json', 'r');
@@ -25,6 +26,12 @@
       $this->counts = [];
     }
 
+    public function __destruct() {
+      if($this->should) {
+        // Save logic
+      }
+    }
+
     public function set_file($file) {
       $raw = file_get_contents($file);
       $this->input = explode(PHP_EOL, $raw);
@@ -34,6 +41,10 @@
 
     public function is_file_set() {
       return $this->fset;
+    }
+    
+    public function save() {
+      $this->should = TRUE;
     }
 
     public function analyze() {

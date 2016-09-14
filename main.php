@@ -45,7 +45,7 @@
         elseif ($cmd == 3) { $this->set_file(); }
         elseif ($cmd == 4) {
           if($this->anal->is_file_set()) { $this->anal->analyze(); } else { print("No file set!"); }
-        } else { exit(); }
+        } else { end_run(); }
       } catch (Exception $e) {
         print("Error! Incorrect action! {$e}\n");
       }
@@ -62,7 +62,20 @@
     }
 
     private function set_file() {
-      print("Set file");
+      while(True) {
+        print("Set the input file\n");
+        $path = readline("File name (including path if not in current directory) > ");
+        if(!file_exists($path)) { print("\nInvalid file path!!\n"); }
+        else { $this->anal->set_file($path); break; }
+      }
+    }
+
+    private function end_run() {
+      $c = readline("Would you like to save? [Y/n] > ");
+      if(strtolower($c) == "n") { exit(); }
+      $this->anal->save();
+      $this->anal->__destruct();
+      exit();
     }
   }
 
