@@ -54,11 +54,19 @@
     }
 
     private function add_word() {
-      print("Add a word");
+      print("------------------ Add a word --------------------\n");
+      print("Add a custom word to the dictionary\n");
+      $this->anal->print_dict();
+      $word = readline("Add word > ");
+      $this->anal->add_word($word);
     }
 
     private function remove_word() {
-      print("Remove a word");
+      print("------------------ Delete a word --------------------\n");
+      print("Remove a word to the dictionary\n");
+      $this->anal->print_dict();
+      $word = readline("Delete word > ");
+      $this->anal->del_word($word);
     }
 
     private function set_file() {

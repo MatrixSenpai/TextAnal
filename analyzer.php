@@ -48,7 +48,10 @@
      */
     public function __destruct() {
       if($this->should) {
-        // Save logic
+        $data = json_encode($this->dictionary);
+        $raw = fopen(DICT_PATH, 'w');
+        fwrite($raw, $data);
+        fclose($raw);
       }
     }
 
@@ -96,6 +99,33 @@
         foreach($words as $word) { $this->check($word); }
       }
       $this->statistics();
+    }
+
+    public function print_dict() {
+      foreach($this->dictionary as $key => $words) {
+        $key = strtoupper($key);
+        print("- {$key}\n");
+        $str = implode(", ", $words);
+        print("\t{$str}\n");
+      }
+    }
+
+    public function add_word($word) {
+      $key = substr($word, 0, 1)[0];
+      if(array_key_exists($key, $this->dictionary)) {
+        array_push($this->dictionary->$key, $word);
+      } else { $this->dictionary->$key = [$word]; }
+      $this->save();
+    }
+
+    public function del_word($word) {
+      $key = substr($word, 0, 1)[0];
+      if(array_key_exists($key, $this->dictionary)) {
+        $delkey = array_search($word, $this->dictionary->$key);
+        unset($this->dictionary->$key[$delkey]);
+      } else {
+        print("Word doesn't exist!");
+      }
     }
 
     // --------------------- PRIVATE --------------
