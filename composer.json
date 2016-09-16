@@ -10,7 +10,13 @@
             "email": "math.matrix@icloud.com"
         }
     ],
+    "repositories": [
+      {
+        "url": "https://github.com/mathmatrix828/cli-progress-bar",
+        "type": "vcs"
+      }
+    ],
     "require": {
-        "dariuszp/cli-progress-bar": "^1.0"
+        "dariuszp/cli-progress-bar": "master"
     }
 }

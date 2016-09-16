@@ -133,8 +133,7 @@
       print("---------- Statistics ----------\n");
       print("Total words: {$this->total}\n");
       foreach($c as $k => $v) {
-        print("Uses of {$k}");
-        $b = new CliProgressBar($this->total, $v);
+        $b = new CliProgressBar($this->total, $v, "Use of \"{$k}\"\n");
         $b->display();
         $b->end();
       }

@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5a199a69c4d85cdfa1181fc761b3168a",
-    "content-hash": "82ee7afdfef9d9da1034501f4dc3c61a",
+    "hash": "03e4de0c4c213806ed4a66d2ff6c2940",
+    "content-hash": "dcc9c1bb05d43d8b90806f5783c7b957",
     "packages": [
         {
             "name": "dariuszp/cli-progress-bar",
-            "version": "1.0.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dariuszp/cli-progress-bar.git",
-                "reference": "54020a8fc60bf19579bfe0317f17a2848d48991d"
+                "url": "https://github.com/mathmatrix828/cli-progress-bar.git",
+                "reference": "9ed0a6afd41b795b471d0a267c1ec94800ec48f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dariuszp/cli-progress-bar/zipball/54020a8fc60bf19579bfe0317f17a2848d48991d",
-                "reference": "54020a8fc60bf19579bfe0317f17a2848d48991d",
+                "url": "https://api.github.com/repos/mathmatrix828/cli-progress-bar/zipball/9ed0a6afd41b795b471d0a267c1ec94800ec48f0",
+                "reference": "9ed0a6afd41b795b471d0a267c1ec94800ec48f0",
                 "shasum": ""
             },
             "type": "library",
@@ -27,7 +27,6 @@
                     "Dariuszp\\": "src/Dariuszp"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -35,10 +34,18 @@
                 {
                     "name": "Dariusz Półtorak",
                     "email": "poltorak.dariusz@gmail.com"
+                },
+                {
+                    "name": "Mason Phillips",
+                    "email": "math.matrix@icloud.com",
+                    "role": "Contributor"
                 }
             ],
             "description": "Cli progress bar",
-            "time": "2015-11-02 14:38:59"
+            "support": {
+                "source": "https://github.com/mathmatrix828/cli-progress-bar/tree/master"
+            },
+            "time": "2016-09-16 17:55:46"
         }
     ],
     "packages-dev": [],
