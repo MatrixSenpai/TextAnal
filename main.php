@@ -71,6 +71,7 @@
 
     private function set_file() {
       while(True) {
+        print("Current file: {$this->anal->get_file_name()}\n");
         print("Set the input file\n");
         $path = readline("File name (including path if not in current directory) > ");
         if(!file_exists($path)) { print("\nInvalid file path!!\n"); }

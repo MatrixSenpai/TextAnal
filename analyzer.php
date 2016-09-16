@@ -17,6 +17,7 @@
     private $input;
     private $counts;
     private $fset;
+    private $settings;
     private $should;
     private $total;
 
@@ -31,8 +32,8 @@
       fclose($raw);
 
       if(file_exists(SETTINGS_PATH)) {
-        $settings = json_decode(file_get_contents(SETTINGS_PATH));
-        $this->set_file($settings->settings->file_name);
+        $this->settings = json_decode(file_get_contents(SETTINGS_PATH));
+        $this->set_file($this->settings->settings->file_name);
       } else {
         $this->fset = FALSE;
       }
@@ -52,6 +53,11 @@
         $raw = fopen(DICT_PATH, 'w');
         fwrite($raw, $data);
         fclose($raw);
+
+        $raw = fopen(SETTINGS_PATH, 'w');
+        $data = json_encode($this->settings);
+        fwrite($raw, $data);
+        fclose($raw);
       }
     }
 
@@ -61,10 +67,15 @@
      * @param file - input file
      */
     public function set_file($file) {
+      $this->settings->settings->file_name = $file;
       $raw = file_get_contents($file);
       $this->input = explode(PHP_EOL, $raw);
       array_pop($this->input);
       $this->fset = TRUE;
+    }
+
+    public function get_file_name() {
+      return $this->settings->settings->file_name;
     }
 
     /**
