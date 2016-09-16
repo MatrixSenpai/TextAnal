@@ -45,7 +45,7 @@
         elseif ($cmd == 3) { $this->set_file(); }
         elseif ($cmd == 4) {
           if($this->anal->is_file_set()) { $this->anal->analyze(); } else { print("No file set!"); }
-        } else { end_run(); }
+        } else { $this->end_run(); }
       } catch (Exception $e) {
         print("Error! Incorrect action! {$e}\n");
       }

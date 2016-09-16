@@ -4,31 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "11ed468bc9afb3a5b546df62c46d4167",
-    "content-hash": "c11c3d963c8f8e63c9fc8ddc941fca5c",
+    "hash": "5a199a69c4d85cdfa1181fc761b3168a",
+    "content-hash": "82ee7afdfef9d9da1034501f4dc3c61a",
     "packages": [
         {
-            "name": "guiguiboy/php-cli-progress-bar",
-            "version": "dev-master",
+            "name": "dariuszp/cli-progress-bar",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/guiguiboy/PHP-CLI-Progress-Bar.git",
-                "reference": "7d3eb61c1f0c164b9c3139af694b2d38171e4d04"
+                "url": "https://github.com/dariuszp/cli-progress-bar.git",
+                "reference": "54020a8fc60bf19579bfe0317f17a2848d48991d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guiguiboy/PHP-CLI-Progress-Bar/zipball/7d3eb61c1f0c164b9c3139af694b2d38171e4d04",
-                "reference": "7d3eb61c1f0c164b9c3139af694b2d38171e4d04",
+                "url": "https://api.github.com/repos/dariuszp/cli-progress-bar/zipball/54020a8fc60bf19579bfe0317f17a2848d48991d",
+                "reference": "54020a8fc60bf19579bfe0317f17a2848d48991d",
                 "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": ">=5.3.0"
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "ProgressBar": "."
+                "psr-4": {
+                    "Dariuszp\\": "src/Dariuszp"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -37,27 +33,18 @@
             ],
             "authors": [
                 {
-                    "name": "Guillaume",
-                    "email": "guillaume.bretou@gmail.com"
+                    "name": "Dariusz Półtorak",
+                    "email": "poltorak.dariusz@gmail.com"
                 }
             ],
-            "description": "Progress bar for PHP CLI scripts",
-            "homepage": "https://github.com/guiguiboy/PHP-CLI-Progress-Bar",
-            "keywords": [
-                "bar",
-                "cli",
-                "command-line",
-                "progress"
-            ],
-            "time": "2014-11-19 13:12:00"
+            "description": "Cli progress bar",
+            "time": "2015-11-02 14:38:59"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "guiguiboy/php-cli-progress-bar": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

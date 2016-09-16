@@ -11,6 +11,6 @@
         }
     ],
     "require": {
-        "guiguiboy/php-cli-progress-bar": "dev-master"
+        "dariuszp/cli-progress-bar": "^1.0"
     }
 }
